@@ -81,8 +81,8 @@ end
 
 
 function prompt_user -d "Display current user if different from $default_user"
-  set -l BG 444444
-  set -l FG BCBCBC
+  set -l BG grey 
+  set -l FG cyan
 
   if [ "$theme_display_user" = "yes" ]
     if [ "$USER" != "$default_user" -o -n "$SSH_CLIENT" ]
@@ -112,7 +112,7 @@ end
 
 
 function prompt_dir -d "Display the current directory"
-  prompt_segment 1C1C1C FFFFFF (prompt_pwd)
+  prompt_segment grey black (prompt_pwd)
 end
 
 
